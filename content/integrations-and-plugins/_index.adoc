@@ -1,0 +1,10 @@
+---
+title: Integrations and Plugins
+weight: 700
+pre: "<b>7. </b>"
+chapter: true
+---
+
+=== Chapter 7
+
+= Integrations and Plugins

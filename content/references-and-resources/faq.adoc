@@ -1,0 +1,82 @@
+---
+title: "Frequently Asked Questions (FAQs) and Troubleshooting"
+aliases: ["/faq"]
+weight: 910
+---
+
+= Frequently Asked Questions (FAQs) and Troubleshooting
+Sarah White <https://github.com/graphitefriction[@graphitefriction]>;
+:description: Frequently asked questions (FAQ) about the Asciidoctor project, Asciidoctor syntax and processor, and the AsciiDoc syntax. +
+Tips for fixing installation, syntax, processing, and rendering problems when using Asciidoctor.
+:keywords: Asciidoctor, AsciiDoc, syntax, question, render, process, problem, issue, tips
+ifndef::env-site[]
+:icons: font
+endif::[]
+:source-highlighter: coderay
+:idprefix:
+:idseparator: -
+:language: asciidoc
+:table-caption!:
+:example-caption!:
+:figure-caption!:
+// :imagesdir: ../images
+:includedir: _includes
+:toc:
+
+== FAQs
+
+=== Does Asciidoctor only process text that is US-ASCII encoded?
+
+No.
+Asciidoctor has full Unicode support (UTF-8 by default, UTF-16 with a BOM).
+👌
+
+The "`Ascii`" in AsciiDoc and Asciidoctor merely refers to the range of characters from which the special characters in the syntax (section title markers, block delimiters, macro and block names, etc.) are drawn.
+In other words, you only need to use characters from US-ASCII to form the structure of an AsciiDoc document.
+The content itself, which includes attribute values, may contain characters from any character plane in Unicode.
+
+Asciidoctor assumes input is encoded in UTF-8 and it encodes output documents in UTF-8 as well.
+
+=== How do I make relative links to other AsciiDoc files to work correctly on GitHub?
+
+include::{includedir}/xref-source-to-source.adoc[]
+
+[#converter-vs-backend]
+=== What's the relationship between a converter and a backend?
+
+//You can think of a backend as the keyword for a converter.
+
+A [.term]*converter* is the software component in Asciidoctor that performs conversion from AsciiDoc to a publishable format.
+A [.term]*backend* is an alias--kind of like a keyword--that identifies the converter to use.
+
+The backend expresses an intent to transform to a certain format (e.g., `html5` for HTML5).
+But it's more than just being shorter to type.
+Multiple converters can bind to (i.e., stake claim to) the same backend in order to provide different approaches for performing that conversion.
+For example, the backend `pdf` could activate Asciidoctor PDF, but it's also possible it means a different implementation.
+The last converter bound to a backend wins.
+
+//We might have used the word "format", but "backend" was the already established term in the AsciiDoc ecosystem.
+
+=== What is the media type for AsciiDoc?
+
+A https://en.wikipedia.org/wiki/Media_type[media type], or MIME type, is a code for identifying file formats and format contents transmitted on the Internet.
+
+The first idea for an official MIME type for AsciiDoc came from the https://discuss.asciidoctor.org/Mimetype-for-Asciidoc-td211.html[Mimetype for AsciiDoc] discussion on the Asciidoctor mailinglist:
+
+ text/x-asciidoc
+
+Recently, the internet media type `text/markdown` was registered for Markdown, so a stronger case can now be made for:
+
+ text/asciidoc
+
+Either one will do, though it probably makes sense to align with Markdown on this one.
+
+== Troubleshooting
+
+=== Part way through the document, the blocks stop rendering correctly. What went wrong?
+
+include::{includedir}/ts-block-render.adoc[tag=answer]
+
+=== Why don't links to URLs that contain an underscore or caret work?
+
+include::{includedir}/ts-url-format.adoc[tag=sb]

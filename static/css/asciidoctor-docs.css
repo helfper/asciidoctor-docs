@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Comfortaa";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local("Comfortaa Regular"),
+    local("Comfortaa-Regular"),
+    url("../fonts/comfortaa-latin-400.woff2") format("woff2"),
+    url("../fonts/comfortaa-latin-400.woff") format("woff");
+}
+
+#site-logo {
+  height: 40px;
+  max-width: 95%;
+  margin-top: 7px;
+  fill: #fff;
+}
+
+#site-logo text {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 300px;
+}

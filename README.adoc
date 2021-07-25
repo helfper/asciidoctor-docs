@@ -1,0 +1,11 @@
+= Asciidoctor Documentation
+
+The content of this site was taken from https://asciidoctor.org/docs/[asciidoctor.org] (https://github.com/asciidoctor/asciidoctor.org[source on GitHub])
+as a way to demonstrate the integration between https://gohugo.io/[Hugo site generator] and https://asciidoctor.org/[Asciidoctor] due to its extensive
+coverage of Asciidoctor's features.
+
+== Preview the site locally
+
+To preview the site locally, simply run hugo in server mode:
+
+ $ hugo server --destination public

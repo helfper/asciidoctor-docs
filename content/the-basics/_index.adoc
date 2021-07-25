@@ -1,0 +1,12 @@
+---
+title: The Basics
+weight: 100
+pre: "<b>1. </b>"
+chapter: true
+---
+
+=== Chapter 1
+
+= The Basics
+
+Discover Asciidoctor and how it can help you.

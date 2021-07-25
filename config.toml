@@ -1,0 +1,52 @@
+title = "Asciidoctor Documentation"
+theme = "hugo-theme-learn"
+
+[params]
+editURL = "https://github.com/helfper/asciidoctor-docs/blob/master/content/"
+themeVariant = "adoc"
+custom_css = ["css/asciidoctor-docs.css"]
+disableInlineCopyToClipBoard = true
+disableLandingPageButton = true
+
+[outputs]
+home = ["HTML", "JSON"]
+
+[markup.tableOfContents]
+endLevel = 4
+
+[markup.asciidocExt]
+extensions = ["asciidoctor-diagram"]
+workingFolderCurrent = true
+
+[markup.asciidocExt.attributes]
+docref = "link:"
+uri-docs = "link:"
+includedir = "../../_includes"
+imagesdir = "../../images"
+env-site = true
+toc = ""
+toclevels = 4
+allow-uri-read = ""
+relfileprefix = "../@"
+relfilesuffix = "/@"
+idprefix = ""
+idseparator = "-"
+icons = "font@"
+sectanchors = ""
+source-highlighter = "highlight.js"
+"prewrap!" = "@"
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
+url = "https://github.com/helfper/asciidoctor-docs"
+weight = 10
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bookmark'></i> Hugo Homepage"
+url = "https://gohugo.io/"
+weight = 20
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bookmark'></i> Asciidoctor Homepage"
+url = "https://asciidoctor.org/"
+weight = 30
